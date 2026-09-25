@@ -84,6 +84,12 @@ function render() {
   }
   $('#consent')?.addEventListener('change',e => $('#analyze').disabled = !e.target.checked);
   $('#analyze')?.addEventListener('click',analyze);
+  $('#preview')?.addEventListener('error',() => {
+    const note = document.createElement('p');
+    note.className = 'preview-note';
+    note.textContent = {uz:'Bu brauzer videoni oldindan ko‘rsata olmadi. Serverda tahlil qilish uchun yuborishingiz mumkin.',ru:'Браузер не может показать это видео. Его всё равно можно отправить на сервер для анализа.',en:'This browser cannot preview this video. You can still submit it for server-side analysis.'}[language];
+    $('#preview')?.replaceWith(note);
+  },{once:true});
 }
 function selectFile(file) {
   if (!file) return;
