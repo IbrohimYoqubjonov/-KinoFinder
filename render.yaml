@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: kinofinder-private-beta
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TMDB_READ_ACCESS_TOKEN
+        sync: false
+      - key: BETA_ACCESS_CODE
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: OPENAI_VISION_MODEL
+        value: gpt-4.1-mini
+      - key: OPENAI_TRANSCRIBE_MODEL
+        value: gpt-4o-mini-transcribe
+      - key: MAX_RECOGNITIONS_PER_DAY
+        value: "50"

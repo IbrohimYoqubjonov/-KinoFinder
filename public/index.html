@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="KinoFinder — bir sahnadan yangi kino kashf eting. Private beta.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KinoFinder">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <title>KinoFinder · A scene is all it takes</title>
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="KinoFinder"><span class="brand-icon">K<span>•</span></span><span>KinoFinder<span class="brand-dot">.</span></span></a>
+      <div class="side-label">YOUR CINEMA COMPANION</div>
+      <nav id="nav" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom"><div class="beta-symbol">✳</div><b>Small clip. Big discovery.</b><p data-t="sideCopy"></p><span class="version">PRIVATE BETA <i>v0.1</i></span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span class="breadcrumb">KinoFinder <span>/</span> <b id="page-name"></b></span><div class="top-actions"><span class="beta-badge">PRIVATE BETA</span><button id="access-button" class="avatar" aria-label="Beta access">K</button></div></header>
+      <main id="main" tabindex="-1"></main>
+      <footer><span>© 2026 KinoFinder</span><span data-t="footer"></span><span class="footer-dot">●</span></footer>
+    </div>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="access-dialog" aria-labelledby="access-title"><button class="dialog-close" id="close-dialog" aria-label="Close">×</button><span class="eyebrow">KINOFINDER PRIVATE BETA</span><h2 id="access-title" data-t="accessTitle"></h2><p data-t="accessCopy"></p><form id="login-form"><label for="beta-code" data-t="accessCode"></label><input id="beta-code" name="code" type="password" autocomplete="current-password" required minlength="16"><p id="login-error" class="error" role="alert"></p><button class="button primary" type="submit" data-t="unlock"></button></form></dialog>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "kinofinder-private-beta",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --watch --env-file-if-exists=.env server/index.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check server/index.js && node --check server/recognition.js && node --check public/app.js && node --check public/sw.js"
+  },
+  "dependencies": { "express": "^5.1.0", "multer": "^2.0.2" }
+}
