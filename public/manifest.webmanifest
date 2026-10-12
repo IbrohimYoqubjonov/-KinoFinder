@@ -1,5 +1,5 @@
 {
-  "id": "/", "name": "KinoFinder", "short_name": "KinoFinder",
+  "id": "/", "name": "NovaCinema", "short_name": "NovaCinema",
   "description": "Discover movies from a scene. Private beta.",
   "lang": "uz", "start_url": "/", "scope": "/", "display": "standalone",
   "background_color": "#101113", "theme_color": "#101113", "orientation": "any",

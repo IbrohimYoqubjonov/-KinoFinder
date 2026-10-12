@@ -1,4 +1,6 @@
-# KinoFinder · private beta
+# NovaCinema (kod: KinoFinder) · private beta
+
+> Mahsulot nomi **NovaCinema** — NovaVerse tarkibidagi kino platformasi. Reja: `docs/NOVACINEMA-SPEC.md`. Repo, Render xizmati va ichki nomlar hozircha o'zgarmagan.
 
 A standalone movie-discovery PWA, separate from NovaVerse. Uzbek, Russian and English interface, cinematic responsive design, video upload, analysis/results, device-local history and watchlist, iPhone home-screen support, and a protected server-side recognition pipeline.
 

@@ -1,4 +1,4 @@
-const CACHE = 'kinofinder-shell-v1';
+const CACHE = 'kinofinder-shell-v2';
 const SHELL = ['/', '/index.html', '/style.css', '/app.js', '/i18n.js', '/icon.svg', '/manifest.webmanifest', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png'];
 self.addEventListener('install',event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate',event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('kinofinder-shell-') && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())));
